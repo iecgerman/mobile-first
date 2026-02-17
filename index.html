@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <title>Diseño Web Portafolio</title>
       <link rel="stylesheet" href="css/reset.css">
       <link rel="stylesheet" href="css/variables.css">
       <link rel="stylesheet" href="css/global.css">
@@ -11,9 +11,21 @@
 <body>
       <header class="header">
             <div class="header__brand">
-                  <img src="/assets/logo.svg" alt="Diseño Web Portafolio" class="header__logo">
+                  <img class="header__logo" src="/assets/logo.svg"  alt="Diseño Web Portafolio" >
                   <span class="header__title">Diseño Web</span>
             </div>
+            <button arial-label="Toggle Menu" class="header__toggle" >
+                  <img src="assets/toggle.svg" alt="Menu de Hamburguesa">
+            </button>
+            <nav class="header__nav">
+                  <ul>
+                        <li><a href="#about">Acerca de</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#projects">Proyectos</a></li>
+                        <li><a href="#contac">Contacto</a></li>
+                  </ul>
+            </nav>
+            <button class="header__cta" aria-label="Download Resumen" >Ridiculum</button>
       </header>
 </body>
 </html>
