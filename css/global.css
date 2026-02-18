@@ -105,6 +105,12 @@ body {
       line-height: 1.5;
 }
 
+.hero__image {
+      width: 100%;
+      height: auto;
+      max-height: 30vh;
+}
+
 @media (width >= 768px) {
       .hero {
             flex-direction: row-reverse;
