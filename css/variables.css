@@ -1,8 +1,8 @@
 :root {
       /* Primary */
-      --color-black: #000000;
-      --color-neutral: #404040;
-      --color-white: #ffffff;
+      --primary-black: #000000;
+      --primary-neutral: #404040;
+      --primary-white: #ffffff;
 
       /* Zinc */
       --color-zinc-100: #f4f4f5;
