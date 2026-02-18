@@ -4,6 +4,20 @@ body {
       font-family: 'Sora', sans-serif;
 }
 
+.outlined {
+      color: var(--color-white);
+      text-shadow:
+            1px 0px var(--color-black),
+            -1px 0px var(--color-black),
+            0px -1px var(--color-black),
+            1px 1px var(--color-black),
+            -1px -1px var(--color-black),
+            1px -1px var(--color-black),
+            -1px 1px var(--color-black);
+}
+
+/* --- HEADER SECTION --- */
+
 .header {
       display: flex;
       justify-content: space-between;
@@ -52,5 +66,47 @@ body {
             color: var(--color-white);
             padding: var(--spacing-16) var(--spacing-20);
             border-radius: 4px;
+      }
+}
+
+/* Hero Section */
+
+.hero {
+      padding: var(--spacing-40) var(--spacing-16);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-40);
+}
+
+.hero__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: var(--spacing-20);
+}
+
+.hero__title {
+      /* 16px = 1rem */
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      font-weight: 400;
+      color: var(--color-black);
+}
+
+.hero__title strong {
+      font-weight: 800;
+}
+
+.hero__description {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--primary-black);
+      line-height: 1.5;
+}
+
+@media (width >= 768px) {
+      .hero {
+            flex-direction: row-reverse;
       }
 }
