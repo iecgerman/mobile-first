@@ -4,6 +4,12 @@ body {
       font-family: 'Sora', sans-serif;
 }
 
+section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--spacing-40) var(--spacing-16);
+}
+
 /* .outline {
       color: var(--primary-white);
       text-shadow:
@@ -55,6 +61,8 @@ body {
       justify-content: space-between;
       align-items: center;
       padding: var(--spacing-16);
+      max-width: var(--max-width);
+      margin: 0 auto;
 }
 
 .header__brand {
@@ -101,8 +109,9 @@ body {
       }
 }
 
-/* Hero Section */
-
+/******************************/
+/***      Hero Section      ***/
+/******************************/
 .hero {
       /* este paddin esta de sobra por el .section--container */
       /* padding: var(--spacing-40) var(--spacing-16); */
@@ -141,7 +150,7 @@ body {
 .hero__image {
       width: 100%;
       height: auto;
-      max-height: 30vh;
+      max-height: 40vh;
 }
 
 .hero__social {
@@ -178,13 +187,40 @@ body {
 }
 
 @media (width >= 768px) {
-      .hero {
+      /* aquì ocupaba mas especificidad */
+      .hero .section--container {
             flex-direction: row-reverse;
       }
-      .hero__content {
+
+      /* .hero__content {
             max-width: 50%;
+      } */
+}
+
+/******************************/
+/***     MIS HABILIDADES    ***/
+/******************************/
+
+/* .skills__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-20);
+}
+
+@media (width >= 768px) {
+      .skills__grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-32);
       }
 }
+
+@media (width >= 1024px) {
+      .skills__grid {
+            grid-template-columns: repeat(5, 1fr);
+      }
+} */
+
+/*******************************************************************/
 
 /* Grid auto-fit */
 
@@ -211,6 +247,7 @@ body {
 }
 
 @media (width >= 1024px) {
+      /* aprouch hibrido */
       .skills__grid {
             grid-template-columns: repeat(5, 1fr);
       }
@@ -218,8 +255,6 @@ body {
             display: flex;
       }
 }
-
-/*** MIS HABILIDADES ***/
 
 .skills {
       display: flex;
@@ -263,18 +298,19 @@ body {
 }
 
 .skill-card__icon img {
-      width: 48px;
-      height: 48px;
+      width: clamp(3rem, 5vw, 5rem);
+      height: auto;
       margin-bottom: var(--spacing-16);
 }
 
 .skill-card__label {
-      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-size: clamp(1rem, 2vw, 1.5rem);
       font-weight: 700;
       color: var(--primary-black);
 }
-
+/******************************/
 /* --- EXPERIENCE SECTION --- */
+/******************************/
 
 .experience {
       background-color: var(--primary-black);
