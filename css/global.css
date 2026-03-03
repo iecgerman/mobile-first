@@ -371,3 +371,59 @@ section {
             grid-template-areas: 'logo role date' 'description description description';
       }
 }
+
+/******************************/
+/*  --- PROJECTS SECTION ---  */
+/******************************/
+
+.projects {
+      background: var(--primary-black);
+      color: var(--primary-white);
+}
+
+.projects__title {
+      color: var(--primary-white);
+      margin-bottom: var(--spacing-32);
+}
+
+.project-card {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-28);
+}
+
+.project-card__image-wrapper {
+      width: 100%;
+      border-radius: 10%;
+      overflow: hidden;
+}
+
+.project-card__image {
+      width: 100%;
+      height: auto;
+      display: block;
+}
+
+.project-card__content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-24);
+      justify-content: center;
+}
+
+.project-card__number {
+      font-size: clamp(1.25rem, 3vw, 2rem);
+      font-weight: 800;
+      line-height: 1;
+}
+
+.project-card__title {
+      font-size: clamp(1.25rem, 2.75vw, 1.75rem);
+      font-weight: 800;
+      line-height: 1.2;
+}
+
+.project-card__link {
+      display: inline-block;
+      margin-top: var(--spacing-8);
+}
