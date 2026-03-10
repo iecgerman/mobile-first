@@ -465,3 +465,176 @@ section {
             max-width: 50%;
       }
 }
+
+/**********************************/
+/*  --- TESTIMONIALS SECTION ---  */
+/**********************************/
+
+.testimonials__list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-40);
+      margin-top: var(--spacing-40);
+}
+
+.testimonial-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-24);
+      padding: var(--spacing-40);
+      box-shadow: 0px 8px 16px -6px rgba(24, 39, 75, 0.4);
+      border-radius: 20px;
+      background: var(--primary-white);
+      transition: transform 0.2s ease;
+}
+
+.testimonial-card__header {
+      position: relative;
+      display: inline-block; /* Necesario para que el contenedor se ajuste al tamaño de la imagen */
+}
+
+.testimonial-card__avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      border: 2px solid var(--primary-black);
+}
+.testimonial-card__quote-icon {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 30px;
+      height: 30px;
+}
+
+/* .testimonial-card__header picture {
+      max-width: 100px;
+      border-radius: 50%;
+} */
+
+.testimonial-card__quote-icon {
+      border-radius: 50%;
+}
+
+.testimonial-card__text {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-24);
+      margin-top: var(--spacing-24);
+}
+
+.testimonial-card__footer {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-24);
+}
+
+/*********************************/
+/*        CONTACT SECTION        */
+/*********************************/
+
+.contact .section--container {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-40);
+}
+
+.contact__form-wrapper {
+      width: 100%;
+}
+
+.contact__form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-20);
+}
+
+.contact__input,
+.contact__textarea {
+      width: 100%;
+      padding: var(--spacing-16);
+      border: 1px solid var(--primary-black);
+      border-radius: 4px;
+      font-family: inherit;
+      /* Los inputs siempre iran de 16px porque el iphone hace un zoom */
+      font-size: 16px;
+      outline: none;
+      transition:
+            box-shadow 0.3s,
+            border-color 0.3s;
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+      border-color: var(--primary-black);
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact__input:focus-visible,
+.contact__textarea:focus-visible {
+      outline: 2px solid var(--primary-black);
+      outline-offset: 2px;
+}
+
+.contact__input::placeholder,
+.contact__textarea::placeholder {
+      color: var(--color-zinc-500);
+}
+
+.contact__textarea {
+      min-height: 120px;
+      resize: vertical;
+}
+
+.contact__actions {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-24);
+      align-items: flex-start;
+}
+
+.contact__button {
+      background: var(--primary-black);
+      color: var(--primary-white);
+      padding: var(--spacing-16) var(--spacing-32);
+      border: none;
+      border-radius: 4px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+}
+
+.contact__button:hover {
+      opacity: 0.9s;
+}
+
+.contact__socials {
+      display: flex;
+      gap: var(--spacing-24);
+}
+
+.contact__title {
+      text-align: start;
+}
+
+.contact__description {
+      font-size: clamp(0.875rem, 2vw, 1rem);
+      line-height: 1.5;
+      color: var(--color-zinc-500);
+}
+
+.contact__details {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-8);
+}
+
+.contact__email,
+.contact__phone {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-weight: 600;
+      color: var(--primary-black);
+}
