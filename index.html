@@ -23,7 +23,7 @@
                         />
                         <span class="header__title">Diseño Web</span>
                   </div>
-                  <button arial-label="Toggle Menu" class="header__toggle">
+                  <button aria-label="Toggle Menu" class="header__toggle">
                         <img
                               src="assets/toggle.svg"
                               alt="Menu de Hamburguesa"
@@ -34,11 +34,11 @@
                               <li><a href="#about">Acerca de</a></li>
                               <li><a href="#skills">Habilidades</a></li>
                               <li><a href="#projects">Proyectos</a></li>
-                              <li><a href="#contac">Contacto</a></li>
+                              <li><a href="#contact">Contacto</a></li>
                         </ul>
                   </nav>
                   <button class="header__cta" aria-label="Download Resumen">
-                        Ridiculum
+                        Descargar CV
                   </button>
             </header>
             <main>
@@ -73,7 +73,7 @@
                                           <a
                                                 href="#"
                                                 class="social--link"
-                                                arial-label="Facebook"
+                                                aria-label="Facebook"
                                           >
                                                 <img
                                                       src="assets/facebook.svg"
@@ -83,7 +83,7 @@
                                           <a
                                                 href="#"
                                                 class="social--link"
-                                                arial-label="Reddit"
+                                                aria-label="Reddit"
                                           >
                                                 <img
                                                       src="assets/reddit.svg"
@@ -93,7 +93,7 @@
                                           <a
                                                 href="#"
                                                 class="social--link"
-                                                arial-label="Twitter"
+                                                aria-label="Twitter"
                                           >
                                                 <img
                                                       src="assets/twitter.svg"
@@ -103,7 +103,7 @@
                                           <a
                                                 href="#"
                                                 class="social--link"
-                                                arial-label="Discord"
+                                                aria-label="Discord"
                                           >
                                                 <img
                                                       src="assets/discord.svg"
@@ -114,6 +114,7 @@
                               </div>
                         </div>
                   </section>
+
                   <section class="skills" id="skills">
                         <div class="section--container">
                               <h2 class="skills__title section--title">
@@ -205,7 +206,7 @@
                                     <div class="skill-card">
                                           <div class="skill-card__icon">
                                                 <img
-                                                      src="assets/stroybook.svg"
+                                                      src="assets/storybook.svg"
                                                       alt="Storybook"
                                                 />
                                           </div>
@@ -231,7 +232,7 @@
                   <section class="experience" id="experience">
                         <div class="section--container">
                               <h2 class="experience__title section--title">
-                                    Mi <strong>Expriencia</strong>
+                                    Mi <strong>Experiencia</strong>
                               </h2>
 
                               <div class="experience-card">
@@ -316,13 +317,68 @@
                               </div>
                         </div>
                   </section>
-                  <section class="about" id="aobut">
-                        <div class="section--container">
-                              <h2 class="section--title">
-                                    <strong>Acerca</strong> de
-                              </h2>
+
+                  <section class="about" id="about">
+                        <div class="section-container about__container">
+                              <div class="about__image-wrapper">
+                                    <img
+                                          src="assets/about_me.svg"
+                                          alt="About Me"
+                                          class="about__image"
+                                    />
+                              </div>
+                              <div class="about__content">
+                                    <h2 class="section-title about__title">
+                                          About <strong>Me</strong>
+                                    </h2>
+                                    <div class="about__text">
+                                          <p>
+                                                I'm a passionate,
+                                                self-proclaimed designer who
+                                                specializes in full stack
+                                                development (React.js &
+                                                Node.js). I am very enthusiastic
+                                                about bringing the technical and
+                                                visual aspects of digital
+                                                products to life. User
+                                                experience, pixel perfect
+                                                design, and writing clear,
+                                                readable, highly performant code
+                                                matters to me.
+                                          </p>
+                                          <p>
+                                                I began my journey as a web
+                                                developer in 2015, and since
+                                                then, I've continued to grow and
+                                                evolve as a developer, taking on
+                                                new challenges and learning the
+                                                latest technologies along the
+                                                way. Now, in my early thirties,
+                                                7 years after starting my web
+                                                development journey, I'm
+                                                building cutting-edge web
+                                                applications using modern
+                                                technologies such as Next.js,
+                                                TypeScript, Nestjs, Tailwindcss,
+                                                Supabase and much more.
+                                          </p>
+                                          <p>
+                                                When I'm not in full-on
+                                                developer mode, you can find me
+                                                hovering around on twitter or on
+                                                indie hacker, witnessing the
+                                                journey of early startups or
+                                                enjoying some free time. You can
+                                                follow me on Twitter where I
+                                                share tech-related bites and
+                                                build in public, or you can
+                                                follow me on GitHub.
+                                          </p>
+                                    </div>
+                              </div>
                         </div>
                   </section>
+
                   <section class="projects" id="projects">
                         <div class="section--container">
                               <h2 class="section--title">
@@ -677,7 +733,7 @@
                         </div>
                   </section>
                   <section class="contact" id="contact">
-                        <div class="section-container">
+                        <div class="section--container">
                               <div class="contact__form-wrapper">
                                     <form class="contact__form">
                                           <div class="form-group">
@@ -708,7 +764,7 @@
                                                 <textarea
                                                       placeholder="¿Cómo pomedos ayudarte?"
                                                       class="contact__textarea"
-                                                      aria-label="¿Cómo pomedos ayudarte?"
+                                                      aria-label="¿Cómo podemos ayudarte?"
                                                 ></textarea>
                                           </div>
                                           <div class="contact__actions">
@@ -722,7 +778,7 @@
                                                       <a
                                                             href="#"
                                                             class="social--link"
-                                                            arial-label="Facebook"
+                                                            aria-label="Ir a nuestro perfil de Facebook"
                                                       >
                                                             <img
                                                                   src="assets/facebook.svg"
@@ -732,7 +788,7 @@
                                                       <a
                                                             href="#"
                                                             class="social--link"
-                                                            arial-label="Reddit"
+                                                            aria-label="Reddit"
                                                       >
                                                             <img
                                                                   src="assets/reddit.svg"
@@ -742,7 +798,7 @@
                                                       <a
                                                             href="#"
                                                             class="social--link"
-                                                            arial-label="Twitter"
+                                                            aria-label="Twitter"
                                                       >
                                                             <img
                                                                   src="assets/twitter.svg"
@@ -752,7 +808,7 @@
                                                       <a
                                                             href="#"
                                                             class="social--link"
-                                                            arial-label="Discord"
+                                                            aria-label="Discord"
                                                       >
                                                             <img
                                                                   src="assets/discord.svg"

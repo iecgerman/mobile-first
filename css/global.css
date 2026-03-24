@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
+*,
+*::before,
+*::after {
+      box-sizing: border-box;
+}
+
 body {
       font-family: 'Sora', sans-serif;
 }
@@ -52,6 +58,7 @@ section {
       display: flex;
       flex-direction: column;
       gap: var(--spacing-32);
+      /* overflow: hidden; */
 }
 
 /* --- HEADER SECTION --- */
@@ -163,8 +170,8 @@ section {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 60px;
-      height: 60px;
+      width: 55px;
+      height: 55px;
       border: 2px solid var(--primary-black);
       border-radius: 4px;
       background: var(--primary-white);
@@ -347,7 +354,7 @@ section {
 }
 /* Esta clase que onda??? */
 /* .experience-card__company {
-      font-size: clamp(1.25rem, 2vw, 1, 25rem);
+      font-size: clamp(1.25rem, 2vw, 1.25rem);
       font-weight: 600;
       align-self: start;
 } */
@@ -369,6 +376,71 @@ section {
       .experience-card {
             grid-template-columns: 32px 1fr auto;
             grid-template-areas: 'logo role date' 'description description description';
+      }
+}
+
+/******************************/
+/*   --- ABOUT SECTION ---    */
+/******************************/
+
+.about__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-40);
+}
+
+.about__image-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+}
+
+.about__image {
+      width: 100%;
+      height: auto;
+      max-height: 30vh;
+}
+
+.about__content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-24);
+      width: 100%;
+}
+
+.about__title {
+      text-align: left;
+}
+
+.about__text {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-16);
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--zinc-500);
+}
+
+@media (min-width: 768px) {
+      .about__container {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: var(--spacing-40);
+      }
+
+      .about__image {
+            max-height: 40vh;
+      }
+
+      .about__image-wrapper {
+            flex: 1;
+            justify-content: center;
+      }
+
+      .about__content {
+            flex: 1;
       }
 }
 
@@ -416,8 +488,10 @@ section {
 
 .project-card__image-wrapper {
       width: 100%;
+      height: 100%;
       border-radius: 10%;
       overflow: hidden;
+      align-self: center;
 }
 
 .project-card__image {
@@ -477,17 +551,40 @@ section {
       margin-top: var(--spacing-40);
 }
 
+@media (width >= 768px) {
+      .testimonials__list {
+            flex-direction: row;
+            justify-content: center;
+            align-self: stretch;
+      }
+}
+
 .testimonial-card {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      text-align: center;
       gap: var(--spacing-24);
       padding: var(--spacing-40);
       box-shadow: 0px 8px 16px -6px rgba(24, 39, 75, 0.4);
       border-radius: 20px;
       background: var(--primary-white);
       transition: transform 0.2s ease;
+}
+
+.testimonial-card:hover {
+      transform: translateY(-5px);
+      background: var(--primary-black);
+      color: var(--primary-white);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-card:hover .testimonial-card__text {
+      color: var(--color-zinc-300);
+}
+
+.testimonial-card:hover .testimonial-card__footer::before {
+      background-color: var(--primary-white);
 }
 
 .testimonial-card__header {
@@ -541,6 +638,13 @@ section {
       gap: var(--spacing-40);
 }
 
+@media (width >= 1024px) {
+      .contact .section--container {
+            flex-direction: row;
+            align-items: center;
+      }
+}
+
 .contact__form-wrapper {
       width: 100%;
 }
@@ -550,6 +654,11 @@ section {
       flex-direction: column;
       gap: var(--spacing-20);
 }
+
+/* .contact__label {
+      display: block;
+      margin-bottom: var(--spacing-8);
+} */
 
 .contact__input,
 .contact__textarea {
@@ -608,12 +717,18 @@ section {
 }
 
 .contact__button:hover {
-      opacity: 0.9s;
+      opacity: 0.9;
 }
 
 .contact__socials {
       display: flex;
-      gap: var(--spacing-24);
+      gap: var(--spacing-12);
+}
+
+.contact__info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-20);
 }
 
 .contact__title {
@@ -638,3 +753,8 @@ section {
       font-weight: 600;
       color: var(--primary-black);
 }
+
+/* que buen truco para el overflow */
+/* * {
+      outline: 1px solid red !important;
+} */
