@@ -6,6 +6,10 @@
                   name="viewport"
                   content="width=device-width, initial-scale=1.0"
             />
+            <meta
+                  name="description"
+                  content="Hola soy Germán García Frontend Developer en Formación en México."
+            />
             <title>Diseño Web Portafolio</title>
             <link rel="stylesheet" href="css/reset.css" />
             <link rel="stylesheet" href="css/variables.css" />
@@ -49,6 +53,8 @@
                                     src="assets/hero.svg"
                                     alt="Hombre trabajando en laptop"
                                     fetchpriority="high"
+                                    width="300"
+                                    height="300"
                               />
                               <div class="hero__content">
                                     <h1 class="hero__title">
@@ -325,6 +331,8 @@
                                           src="assets/about_me.svg"
                                           alt="About Me"
                                           class="about__image"
+                                          width="300"
+                                          height="300"
                                     />
                               </div>
                               <div class="about__content">
@@ -584,6 +592,63 @@
                                                       <!-- Fallback Final -->
                                                       <img
                                                             src="https://res.cloudinary.com/ds7nxjrwz/image/upload/f_jpg,w_200/Illustration_Portfolio_Template_6_cwxhru.jpg"
+                                                            alt="Imagen de cliente"
+                                                            class="testimonial-card__avatar"
+                                                            loading="lazy"
+                                                      />
+                                                </picture>
+
+                                                <img
+                                                      src="assets/quotes.svg"
+                                                      alt="Quote"
+                                                      class="testimonial-card__quote-icon"
+                                                />
+                                          </div>
+                                          <p class="testimonial-card__text">
+                                                Lorem ipsum dolor, sit amet
+                                                consectetur adipisicing elit.
+                                                Laboriosam pariatur enim quo
+                                                error odio dolore nulla.
+                                          </p>
+                                          <div class="testimonial-card__footer">
+                                                <h3
+                                                      class="testimonial-card__name"
+                                                >
+                                                      Esperanza Buenrostro
+                                                </h3>
+                                                <p
+                                                      class="testimonial-card__role"
+                                                >
+                                                      Fabricación de Uniformes
+                                                </p>
+                                          </div>
+                                    </div>
+
+                                    <div class="testimonial-card">
+                                          <div class="testimonial-card__header">
+                                                <picture>
+                                                      <!-- WebP será el primer intento del navegador -->
+                                                      <!-- También podemos usar f_auto para que el navegador decida -->
+                                                      <source
+                                                            type="image/webp"
+                                                            srcset="
+                                                                  https://res.cloudinary.com/ds7nxjrwz/image/upload/f_webp,w_100/Illustration_Portfolio_Template_6_cwxhru.jpg 100w,
+                                                                  https://res.cloudinary.com/ds7nxjrwz/image/upload/f_webp,w_200/Illustration_Portfolio_Template_6_cwxhru.jpg 200w
+                                                            "
+                                                      />
+
+                                                      <!-- JPG fallback -->
+                                                      <source
+                                                            type="image/jpg"
+                                                            srcset="
+                                                                  https://res.cloudinary.com/ds7nxjrwz/image/upload/f_jpg,w_100/Illustration_Portfolio_Template_6_cwxhru.jpg 100w,
+                                                                  https://res.cloudinary.com/ds7nxjrwz/image/upload/f_jpg,w_200/Illustration_Portfolio_Template_6_cwxhru.jpg 200w
+                                                            "
+                                                      />
+
+                                                      <!-- Fallback Final -->
+                                                      <img
+                                                            src="https://res.cloudinary.com/ds7nxjrwz/image/upload/f_jpg,w_200/Illustration_Portfolio_Template_6_cwxhru.jpg"
                                                             alt="Miny Tamez"
                                                             class="testimonial-card__avatar"
                                                             loading="lazy"
@@ -606,12 +671,13 @@
                                                 <h3
                                                       class="testimonial-card__name"
                                                 >
-                                                      Miny Tamez
+                                                      Johana Moreno
                                                 </h3>
                                                 <p
                                                       class="testimonial-card__role"
                                                 >
-                                                      Diseñadora
+                                                      Lic. en Administración de
+                                                      Empresas
                                                 </p>
                                           </div>
                                     </div>
@@ -668,64 +734,7 @@
                                                 <p
                                                       class="testimonial-card__role"
                                                 >
-                                                      Diseñadora
-                                                </p>
-                                          </div>
-                                    </div>
-
-                                    <div class="testimonial-card">
-                                          <div class="testimonial-card__header">
-                                                <picture>
-                                                      <!-- WebP será el primer intento del navegador -->
-                                                      <!-- También podemos usar f_auto para que el navegador decida -->
-                                                      <source
-                                                            type="image/webp"
-                                                            srcset="
-                                                                  https://res.cloudinary.com/ds7nxjrwz/image/upload/f_webp,w_100/Illustration_Portfolio_Template_6_cwxhru.jpg 100w,
-                                                                  https://res.cloudinary.com/ds7nxjrwz/image/upload/f_webp,w_200/Illustration_Portfolio_Template_6_cwxhru.jpg 200w
-                                                            "
-                                                      />
-
-                                                      <!-- JPG fallback -->
-                                                      <source
-                                                            type="image/jpg"
-                                                            srcset="
-                                                                  https://res.cloudinary.com/ds7nxjrwz/image/upload/f_jpg,w_100/Illustration_Portfolio_Template_6_cwxhru.jpg 100w,
-                                                                  https://res.cloudinary.com/ds7nxjrwz/image/upload/f_jpg,w_200/Illustration_Portfolio_Template_6_cwxhru.jpg 200w
-                                                            "
-                                                      />
-
-                                                      <!-- Fallback Final -->
-                                                      <img
-                                                            src="https://res.cloudinary.com/ds7nxjrwz/image/upload/f_jpg,w_200/Illustration_Portfolio_Template_6_cwxhru.jpg"
-                                                            alt="Miny Tamez"
-                                                            class="testimonial-card__avatar"
-                                                            loading="lazy"
-                                                      />
-                                                </picture>
-
-                                                <img
-                                                      src="assets/quotes.svg"
-                                                      alt="Quote"
-                                                      class="testimonial-card__quote-icon"
-                                                />
-                                          </div>
-                                          <p class="testimonial-card__text">
-                                                Lorem ipsum dolor, sit amet
-                                                consectetur adipisicing elit.
-                                                Laboriosam pariatur enim quo
-                                                error odio dolore nulla.
-                                          </p>
-                                          <div class="testimonial-card__footer">
-                                                <h3
-                                                      class="testimonial-card__name"
-                                                >
-                                                      Miny Tamez
-                                                </h3>
-                                                <p
-                                                      class="testimonial-card__role"
-                                                >
-                                                      Diseñadora
+                                                      Diseñadora Gráfica
                                                 </p>
                                           </div>
                                     </div>
@@ -742,6 +751,7 @@
                                                       placeholder="Tu nombre"
                                                       class="contact__input"
                                                       aria-label="Tu nombre"
+                                                      autocomplete="name"
                                                 />
                                           </div>
                                           <div class="form-group">
@@ -750,6 +760,18 @@
                                                       placeholder="Email"
                                                       class="contact__input"
                                                       aria-label="Email"
+                                                      inputmode="email"
+                                                      autocomplete="email"
+                                                />
+                                          </div>
+                                          <div class="form-group">
+                                                <input
+                                                      type="text"
+                                                      placeholder="Tu teléfono"
+                                                      class="contact__input"
+                                                      aria-label="Tu teléfono"
+                                                      inputmode="tel"
+                                                      autocomplete="tel"
                                                 />
                                           </div>
                                           <div class="form-group">
@@ -758,6 +780,8 @@
                                                       placeholder="Tu sitio Web"
                                                       class="contact__input"
                                                       aria-label="Tu sitio Web"
+                                                      inputmode="url"
+                                                      autocomplete="url"
                                                 />
                                           </div>
                                           <div class="form-group">
