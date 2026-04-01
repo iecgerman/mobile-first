@@ -16,7 +16,7 @@ section {
       padding: var(--spacing-40) var(--spacing-16);
 }
 
-/* .outline {
+/* .outlined {
       color: var(--primary-white);
       text-shadow:
             1px 0px var(--primary-black),
@@ -51,7 +51,7 @@ section {
 
 /* esto nunca lo explicaron */
 .section--container {
-      padding: var(--spacing-40) var(--spacing-16);
+      /* padding: var(--spacing-40) var(--spacing-16); */
       max-width: var(--max-width);
       margin: 0 auto;
       width: 100%;
@@ -70,6 +70,7 @@ section {
       padding: var(--spacing-16);
       max-width: var(--max-width);
       margin: 0 auto;
+      position: relative;
 }
 
 .header__brand {
@@ -89,10 +90,43 @@ section {
       display: none;
 }
 
+.header__nav.header__nav--active {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--primary-white);
+      padding: var(--spacing-20);
+      border-bottom: 2px solid var(--primary-black);
+      z-index: 10;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header__nav.header__nav--active ul {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-16);
+      align-items: center;
+      font-size: 1.25rem;
+      font-weight: 600;
+}
+
 @media (width >= 1024px) {
       .header__nav,
       .header__cta {
             display: block;
+      }
+
+      .header__nav.header__nav--active {
+            position: static;
+            border-bottom: none;
+            box-shadow: none;
+            padding: 0;
+      }
+
+      .header__nav.header__nav--active ul {
+            flex-direction: row;
       }
 
       .header__toggle {
@@ -116,9 +150,10 @@ section {
       }
 }
 
-/******************************/
-/***      Hero Section      ***/
-/******************************/
+/************************************************/
+/***                HERO SECTION              ***/
+/************************************************/
+
 .hero {
       /* este paddin esta de sobra por el .section--container */
       /* padding: var(--spacing-40) var(--spacing-16); */
@@ -175,7 +210,9 @@ section {
       border: 2px solid var(--primary-black);
       border-radius: 4px;
       background: var(--primary-white);
-      transition: all 0.2s ease;
+      transition: all 0.4s ease;
+      /* la siguiente linea creo que esta de mas */
+      color: var(--primary-black);
 }
 
 .social--link:hover {
@@ -194,19 +231,68 @@ section {
 }
 
 @media (width >= 768px) {
-      /* aquì ocupaba mas especificidad */
+      /* aquì ocupaba mas especificidad y agregue .section--container*/
       .hero .section--container {
             flex-direction: row-reverse;
       }
-
-      /* .hero__content {
-            max-width: 50%;
-      } */
 }
 
-/******************************/
-/***     MIS HABILIDADES    ***/
-/******************************/
+/*****************************************/
+/***          MIS HABILIDADES          ***/
+/*****************************************/
+
+.skills {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: var(--spacing-20);
+}
+
+.skill-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      /* para que se haga cuadrado */
+      aspect-ratio: 1/1;
+      /* aspect-ratio: 9/16; */
+      /* aspect-ratio: 16/9; */
+
+      padding: var(--spacing-24);
+      border-radius: 4px;
+
+      background: var(--primary-white);
+      border: 2px solid var(--primary-black);
+
+      transition: transform 0.15s ease;
+}
+
+.skill-card:hover {
+      background: var(--primary-black);
+      color: var(--primary-white);
+      transform: translateY(-2px);
+}
+
+.skill-card:hover .skill-card__icon img {
+      filter: invert(1);
+}
+
+.skill-card:hover .skill-card__label {
+      color: var(--primary-white);
+}
+
+.skill-card__icon img {
+      width: clamp(3rem, 5vw, 5rem);
+      height: auto;
+      margin-bottom: var(--spacing-16);
+}
+
+.skill-card__label {
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      font-weight: 700;
+      color: var(--primary-black);
+}
 
 /* .skills__grid {
       display: grid;
@@ -263,58 +349,6 @@ section {
       }
 }
 
-.skills {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: var(--spacing-20);
-}
-
-.skill-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-
-      /* para que se haga cuadrado */
-      aspect-ratio: 1/1;
-      /* aspect-ratio: 9/16; */
-      /* aspect-ratio: 16/9; */
-
-      padding: var(--spacing-24);
-      border-radius: 4px;
-
-      background: var(--primary-white);
-      border: 2px solid var(--primary-black);
-
-      transition: transform 0.15s ease;
-}
-
-.skill-card:hover {
-      background: var(--primary-black);
-      color: var(--primary-white);
-      transform: translateY(-2px);
-}
-
-.skill-card:hover .skill-card__icon img {
-      filter: invert(1);
-}
-
-.skill-card:hover .skill-card__label {
-      color: var(--primary-white);
-}
-
-.skill-card__icon img {
-      width: clamp(3rem, 5vw, 5rem);
-      height: auto;
-      margin-bottom: var(--spacing-16);
-}
-
-.skill-card__label {
-      font-size: clamp(1rem, 2vw, 1.5rem);
-      font-weight: 700;
-      color: var(--primary-black);
-}
 /******************************/
 /* --- EXPERIENCE SECTION --- */
 /******************************/
@@ -417,7 +451,7 @@ section {
       display: flex;
       flex-direction: column;
       gap: var(--spacing-16);
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 1.5;
       color: var(--zinc-500);
 }
@@ -453,6 +487,11 @@ section {
       color: var(--primary-white);
 }
 
+.project-list {
+      container-name: project-list;
+      container-type: inline-size;
+}
+
 .projects__title {
       color: var(--primary-white);
       margin-bottom: var(--spacing-32);
@@ -462,6 +501,7 @@ section {
       display: flex;
       flex-direction: column;
       gap: var(--spacing-28);
+      margin-bottom: var(--spacing-24);
 }
 /* ESTO FUE USANDO GRID COMO EL EJECICIO */
 /*
@@ -488,10 +528,10 @@ section {
 
 .project-card__image-wrapper {
       width: 100%;
-      height: 100%;
-      border-radius: 10%;
+      border-radius: 15px;
       overflow: hidden;
       align-self: center;
+      /* height: 100%; */
 }
 
 .project-card__image {
@@ -519,14 +559,19 @@ section {
       line-height: 1.2;
 }
 
+.project-card__description {
+      color: var(--zinc-300);
+      line-height: 1.5;
+}
+
 .project-card__link {
-      display: inline-block;
-      margin-top: var(--spacing-8);
+      /* display: inline-block; */
+      margin-bottom: var(--spacing-24);
 }
 
 /* MEDIAS USANDO FLEXBOX */
 
-@media (width >= 768px) {
+@container project-list (min-width: 700px) {
       .project-card {
             flex-direction: row;
       }
